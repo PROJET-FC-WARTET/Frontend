@@ -8,3 +8,18 @@ Ce dossier contient les **spécifications fonctionnelles** du projet, rédigées
 - Permettre de lier une Pull Request à une spécification.
 
 ## Convention de nommage
+Exemple : `UC-01-connexion.md`, `UC-02-affichage-tableau-de-bord.md`
+
+## Structure d'un Use Case
+1. **Acteur principal** : Qui utilise la fonctionnalité ?
+2. **Objectif** : Que veut-il faire ?
+3. **Préconditions** : Que faut-il avant de commencer ?
+4. **Scénario nominal** : Les étapes normales.
+5. **Scénarios alternatifs** : Les cas d'erreur ou exceptions.
+6. **Postconditions** : L'état du système après l'action.
+
+## Spécificité Frontend
+Pour les Use Cases du frontend, ajoutez une section **"Éléments d'interface"** :
+- Quelles pages sont concernées ?
+- Quels composants sont nécessaires (formulaire, bouton, modale) ?
+- Y a-t-il des règles de responsive (mobile, tablette) ?
