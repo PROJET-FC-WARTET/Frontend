@@ -1,26 +1,35 @@
 # Frontend — Projet de classe 2026
 
-## Objectif
-Interface utilisateur et pages du site de classe. Le travail est organisé
-par section du site, ainsi que par éléments transversaux communs à toutes
-les pages : navigation (`navigation/`), ressources statiques (`assets/`),
-styles globaux (`styles/`), et code réutilisable (`shared/`).
+Interface utilisateur du site de classe. L'équipe frontend est organisée par domaine fonctionnel.
 
-## Membres de l'équipe
-[à compléter une fois la répartition par section décidée]
+## 📂 Organisation du dépôt
 
-## Comment contribuer
-1. Cloner ce repo avec GitHub Desktop
-2. Créer une branche depuis `main` (par exemple `page-accueil-bandeau`)
-3. Travailler dans le dossier de votre section, ou dans `navigation/`,
-   `assets/`, `styles/` ou `shared/` pour les éléments communs
-4. Committer régulièrement avec un message clair
-5. Ouvrir une Pull Request vers `main` une fois le travail prêt
+| Dossier | Rôle |
+| :--- | :--- |
+| **`.github/`** | Configuration GitHub (CODEOWNERS, templates). |
+| **`ASSETS/`** | Ressources statiques (images, icônes, polices). |
+| **`DOCS/`** | Documentation, spécifications et Use Cases. |
+| **`NAVIGATION/`** | Routage, menus et protection des routes. |
+| **`SHARED/`** | Composants et code réutilisables. |
 
-Les tâches à faire sont listées dans l'onglet **Issues** et suivies dans
-le **Project** du repo.
+## 🚀 Pour commencer
 
-## Fichiers protégés
-Certains fichiers nécessitent une validation du professeur avant fusion
-(voir `.github/CODEOWNERS`). Vous pouvez toujours proposer une modification
-via Pull Request — elle sera simplement examinée avant intégration.
+1. Clonez ce dépôt avec GitHub Desktop.
+2. Créez une branche (voir le guide de collaboration).
+3. Choisissez une tâche dans le Project de l'organisation.
+4. Suivez le guide `GUIDE.md` pour les conventions.
+
+## 👥 Membres de l'équipe
+
+- Prénom Nom
+- Prénom Nom
+- Prénom Nom
+
+## 📚 Documentation
+
+- Les Use Cases sont disponibles dans [`DOCS/use-case/`](./DOCS/use-case/).
+- Le guide de collaboration est disponible dans [`GUIDE.md`](./GUIDE.md).
+
+## 🔒 Fichiers protégés
+
+Certains fichiers nécessitent une validation du professeur avant fusion (voir `.github/CODEOWNERS`). Vous pouvez toujours proposer une modification via Pull Request — elle sera simplement examinée avant intégration.
