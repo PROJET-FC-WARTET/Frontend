@@ -30,6 +30,13 @@ Interface utilisateur du site de classe. L'équipe frontend est organisée par d
 - Les Use Cases sont disponibles dans [`DOCS/use-case/`](./DOCS/use-case/).
 - Le guide de collaboration est disponible dans [`GUIDE.md`](./GUIDE.md).
 
+- ## 🎨 Identité visuelle
+
+Avant de coder l'interface, consultez impérativement la charte graphique :
+- [Charte graphique](https://github.com/PROJET-FC-WARTET/Documentation/blob/main/CAHIER-DES-CHARGES/charte-graphique.md)
+- [Palette de couleurs](https://github.com/PROJET-FC-WARTET/Documentation/blob/main/CAHIER-DES-CHARGES/palette-couleurs.json)
+- [Ton éditorial](https://github.com/PROJET-FC-WARTET/Documentation/blob/main/CAHIER-DES-CHARGES/ton-editorial.md)
+
 ## 🔒 Fichiers protégés
 
 Certains fichiers nécessitent une validation du professeur avant fusion (voir `.github/CODEOWNERS`). Vous pouvez toujours proposer une modification via Pull Request — elle sera simplement examinée avant intégration.
