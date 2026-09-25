@@ -1,1 +1,26 @@
+# CODEOWNERS - Dépôt Frontend
+# Définit les responsables de la relecture des Pull Requests.
+# Syntaxe : motif_de_fichier @utilisateur1 @utilisateur2
 
+# Règle par défaut : tout le dépôt
+* @ProjetClasse @BlacksheepMaster
+
+# Fichiers de configuration sensibles
+/package.json @ProjetClasse @BlacksheepMaster
+/package-lock.json @ProjetClasse @BlacksheepMaster
+/yarn.lock @ProjetClasse @BlacksheepMaster
+/vite.config.* @ProjetClasse @BlacksheepMaster
+/webpack.config.* @ProjetClasse @BlacksheepMaster
+/.env* @ProjetClasse @BlacksheepMaster
+
+# Assets (images, logos, polices)
+/ASSETS/* @ProjetClasse @BlacksheepMaster
+
+# Navigation et routage
+/NAVIGATION/* @ProjetClasse @BlacksheepMaster
+
+# Composants partagés
+/SHARED/* @ProjetClasse @BlacksheepMaster
+
+# Workflows GitHub Actions
+/.github/workflows/* @ProjetClasse @BlacksheepMaster
