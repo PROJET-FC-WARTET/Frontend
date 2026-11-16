@@ -19,6 +19,12 @@ npm install
 npm run dev
 ```
 
+## En cas d'erreur dans le terminal pour le script désativé sur le système
+
+```bash
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+```
+
 Le site est ensuite accessible sur [http://localhost:3000](http://localhost:3000).
 
 ## 🔗 Liens utiles
@@ -42,10 +48,9 @@ Le site est ensuite accessible sur [http://localhost:3000](http://localhost:3000
 - ## 🎨 Identité visuelle
 
 Avant de coder l'interface, consultez impérativement la charte graphique :
-_
+\_
 _ À ajouter quand l'Issue 5 sera réalisée
 _
-
 
 ## 🔒 Fichiers protégés
 
