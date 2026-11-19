@@ -1,0 +1,10 @@
+/**
+ * Page d'accueil.
+ */
+export default function Home() {
+  return (
+    <div>
+      <h1 className="text-3xl font-bold">Projet Wartet</h1>
+    </div>
+  );
+}
