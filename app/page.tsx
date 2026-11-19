@@ -1,4 +1,6 @@
-
+/**
+ * Page d'accueil.
+ */
 export default function Home() {
   return (
     <div>
