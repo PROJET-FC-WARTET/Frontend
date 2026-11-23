@@ -2,22 +2,37 @@
 
 Interface utilisateur du site de classe. L'équipe frontend est organisée par domaine fonctionnel.
 
-## 📂 Organisation du dépôt
-
-| Dossier | Rôle |
-| :--- | :--- |
-| **`.github/`** | Configuration GitHub (CODEOWNERS, templates). |
-| **`ASSETS/`** | Ressources statiques (images, icônes, polices). |
-| **`DOCS/`** | Documentation, spécifications et Use Cases. |
-| **`NAVIGATION/`** | Routage, menus et protection des routes. |
-| **`SHARED/`** | Composants et code réutilisables. |
-
 ## 🚀 Pour commencer
 
 1. Clonez ce dépôt avec GitHub Desktop.
 2. Créez une branche (voir le guide de collaboration).
 3. Choisissez une tâche dans le Project de l'organisation.
 4. Suivez le guide `GUIDE.md` pour les conventions.
+
+## 🛠️ Installation
+
+1. Installez [Node.js](https://nodejs.org/) (version LTS / stable).
+2. Installez les dépendances et lancez le serveur :
+
+```bash
+npm install
+npm run dev
+```
+
+## En cas d'erreur dans le terminal pour le script désativé sur le système
+
+```bash
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+```
+
+Le site est ensuite accessible sur [http://localhost:3000](http://localhost:3000).
+
+## 🔗 Liens utiles
+
+- [Documentation Next.js](https://nextjs.org/docs)
+- [Documentation React](https://react.dev/)
+- [Documentation Tailwind CSS](https://tailwindcss.com/docs)
+- [Documentation TypeScript](https://www.typescriptlang.org/docs/)
 
 ## 👥 Membres de l'équipe
 
@@ -33,9 +48,10 @@ Interface utilisateur du site de classe. L'équipe frontend est organisée par d
 - ## 🎨 Identité visuelle
 
 Avant de coder l'interface, consultez impérativement la charte graphique :
-_
+\_
 _ À ajouter quand l'Issue 5 sera réalisée
 _
+
 ## 🔒 Fichiers protégés
 
 Certains fichiers nécessitent une validation du professeur avant fusion (voir `.github/CODEOWNERS`). Vous pouvez toujours proposer une modification via Pull Request — elle sera simplement examinée avant intégration.
