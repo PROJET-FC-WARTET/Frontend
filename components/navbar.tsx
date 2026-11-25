@@ -1,27 +1,85 @@
+"use client";
+
+import { navLinks } from "@/config/navigation";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
+import { cn } from "cn";
 import Link from "next/link";
 import Button from "./ui/Button";
-import { navLinks } from "@/config/navigation";
 
-/**
- * Barre de navigation
- */
+type PropsWithClassName = {
+  className?: string;
+};
+
+// Icon menu mobile (https://heroicons.com/)
+const BurgerMenuIcon = (props: PropsWithClassName) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={cn("size-6", props.className)}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+    />
+  </svg>
+);
+
+// Liens de navigations
+const NavLinks = (props: PropsWithClassName) => (
+  <ul className={cn("space-x-4", props.className)}>
+    {navLinks.map((link) => (
+      <li key={link.href} className="hover:text-yellow text-lg uppercase">
+        <Link href={link.href}>{link.name}</Link>
+      </li>
+    ))}
+  </ul>
+);
+
+// Boutons (function pour éviter la redondance)
+const NavButtons = (props: PropsWithClassName) => (
+  <>
+    <Button variant="outline">Espace Club</Button>
+    <Button>Rejoindre le club</Button>
+  </>
+);
+
+// Composant principal : Barre de navigation
 export default function Navbar() {
   return (
-    <nav className="bg-green px-5 py-3">
-      <div className="flex justify-between container items-center">
+    <Disclosure
+      as={"nav"}
+      className="bg-green px-5 py-3 border-b-yellow border-b-4 font-condensed"
+    >
+      <div className="flex items-center w-full justify-between">
         <div>Logo</div>
-        <ul className="flex space-x-2">
-          {navLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <li>{link.name}</li>
-            </Link>
-          ))}
-        </ul>
-        <div className="space-x-2">
-          <Button variant="outline">Espace club</Button>
-          <Button>Rejoindre le club</Button>
+
+        <NavLinks className="md:flex hidden" />
+
+        <div className="md:flex space-x-2 hidden">
+          <NavButtons />
         </div>
+
+        {/* Menu mobile bouton */}
+        <DisclosureButton className="md:hidden block">
+          <BurgerMenuIcon />
+        </DisclosureButton>
       </div>
-    </nav>
+
+      {/*  Menu mobile */}
+      <DisclosurePanel as="div" className="md:hidden py-3 space-y-2">
+        <NavLinks />
+        <div className="space-x-2">
+          <NavButtons />
+        </div>
+      </DisclosurePanel>
+    </Disclosure>
   );
 }
