@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { defaultMetadata } from "@/config/site";
+import Navbar from "@/components/navbar";
 
 // Police principale (texte) → classe Tailwind font-sans (par défaut)
 const barlow = Barlow({
@@ -30,7 +31,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="fr"
       className={`${barlow.variable} ${barlowCondensed.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col w-full">{children}</body>
+      <body className="min-h-full flex flex-col w-full">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
