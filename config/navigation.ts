@@ -1,35 +1,31 @@
-/**
- * TODO : Configuration des éléments de la nav
- */
-
-type NavbarLink = {
+export type NavbarLink = {
   href: string;
-  name: string;
+  label: string;
 };
 
 export const navLinks: NavbarLink[] = [
   {
-    name: "Accueil",
+    label: "Accueil",
     href: "/",
   },
   {
-    name: "Equipes",
+    label: "Equipes",
     href: "/equipes",
   },
   {
-    name: "Actualités",
+    label: "Actualités",
     href: "/actualites",
   },
   {
-    name: "Vie du club",
+    label: "Vie du club",
     href: "/vie-du-club",
   },
   {
-    name: "Le club",
+    label: "Le club",
     href: "#",
   },
   {
-    name: "Contact",
+    label: "Contact",
     href: "/contact",
   },
 ];

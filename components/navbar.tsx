@@ -1,6 +1,6 @@
 "use client";
 
-import { navLinks } from "@/config/navigation";
+import { navLinks, NavbarLink } from "@/config/navigation";
 import {
   Disclosure,
   DisclosureButton,
@@ -9,19 +9,22 @@ import {
 import { cn } from "cn";
 import Link from "next/link";
 import Button from "./ui/Button";
+import { usePathname } from "next/navigation";
+import { SVGProps } from "react";
 
 type PropsWithClassName = {
   className?: string;
 };
 
 // Icon menu mobile (https://heroicons.com/)
-const BurgerMenuIcon = (props: PropsWithClassName) => (
+const BurgerMenuIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
+    {...props}
     className={cn("size-6", props.className)}
   >
     <path
@@ -36,12 +39,31 @@ const BurgerMenuIcon = (props: PropsWithClassName) => (
 const NavLinks = (props: PropsWithClassName) => (
   <ul className={cn("space-x-4", props.className)}>
     {navLinks.map((link) => (
-      <li key={link.href} className="hover:text-yellow text-lg uppercase">
-        <Link href={link.href}>{link.name}</Link>
-      </li>
+      <NavLink key={link.href} {...link} />
     ))}
   </ul>
 );
+
+const NavLink = (props: PropsWithClassName & NavbarLink) => {
+  // Récupération la route actuelle du client
+  const navigation = usePathname();
+
+  const hoverEffect =
+    "hover:after:absolute after:bottom-0 after:left-0 after:h-px after:bg-yellow after:w-full";
+
+  return (
+    <li
+      className={cn(
+        "hover:text-yellow text-lg uppercase relative",
+        hoverEffect,
+        props.className,
+        navigation == props.href && "text-yellow",
+      )}
+    >
+      <Link href={props.href}>{props.label}</Link>
+    </li>
+  );
+};
 
 // Boutons (function pour éviter la redondance)
 const NavButtons = (props: PropsWithClassName) => (
@@ -68,7 +90,10 @@ export default function Navbar() {
         </div>
 
         {/* Menu mobile bouton */}
-        <DisclosureButton className="md:hidden block">
+        <DisclosureButton
+          className="md:hidden block cursor-pointer"
+          aria-label="Bouton menu mobile"
+        >
           <BurgerMenuIcon />
         </DisclosureButton>
       </div>
