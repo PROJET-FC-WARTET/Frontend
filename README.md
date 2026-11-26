@@ -29,8 +29,8 @@ Le site est ensuite accessible sur [http://localhost:3000](http://localhost:3000
 
 ## 🔗 Liens utiles
 
-- [Documentation Next.js](https://nextjs.org/docs)
-- [Documentation React](https://react.dev/)
+- [Documentation Nuxt](https://nuxt.com/docs)
+- [Documentation Vue](https://vuejs.org/guide/introduction.html)
 - [Documentation Tailwind CSS](https://tailwindcss.com/docs)
 - [Documentation TypeScript](https://www.typescriptlang.org/docs/)
 
